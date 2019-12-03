@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link href="https://fonts.googleapis.com/css?family=Pacifico&display=swap" rel="stylesheet">
+	<title>
+		Plastic Project
+	</title>
+	<style type="text/css">
+		body{background: black;}
+		.rogo{width: 450px; margin: auto; position: absolute; margin-left: 41%; margin-top: 12%;}
+
+		.tlerogo{font-family: 'Pacifico', cursive; font-size: 5em;position: absolute; margin: auto; margin-top: 19%; margin-left: 38%; }
+
+		.part1{display: none;}
+
+
+		@keyframes disappear{
+			from{opacity: 1;}
+			to{opacity: 0;}
+		}
+
+		@keyframes appear{
+			from{opacity: 0;}
+			to{opacity: 1;}
+		}
+
+		@keyframes wtb{
+			from{color: white;}
+			to{color: black;}
+		}
+	</style>
+</head>
+<body>
+	<div class="start" id="start">
+		<img class="rogo" src="rogo.png" id="rogo">
+		<p class="tlerogo" 
+		id="tlerogo" style="opacity: 0; color: white;">Plastic Project</p>
+	</div>
+
+	<div class="part1" id="part1">
+		<img src="back1.png" style="width : 1910px; margin-top: 5%;position: absolute;">
+		<img src="win.png" style="position: absolute; margin: auto; margin-left: 11.2%; margin-top: 18%;" id="win">
+		<img src="winlight.png" style="position: absolute; margin: auto; margin-left: 11.2%; margin-top: 18%; display: none;" id="winlight">
+	</div>
+	
+	<script type="text/javascript">
+		rogo.onclick = function(){
+			rogo.style.animation = "disappear 2s forwards";
+			tlerogo.style.animation = "appear 5s forwards";
+		}
+
+		tlerogo.onclick = function(){
+			start.style.animation = "wtb 2s forwards";
+			part1.style.display = "block";
+		}
+
+		win.onclick = function(){
+			winlight.style.display = "block";
+		}
+	</script>
+</body>
+</html>
